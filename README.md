@@ -1,96 +1,94 @@
 # pfsense-beginner-project
 Mini projet cybersécurité : mise en place d’un firewall pfSense et simulation de tests réseau avec Kali Linux (scan nmap)/Cybersecurity project focused on configuring a pfSense firewall and testing its security through network scans using Kali Linux
 
-## Network Architecture
+The objective is to understand how a firewall works and how to analyze network traffic.
 
-The lab environment was created using VirtualBox with the following setup:
+---
+
+## 1- Network Setup
+
+The environment was created using VirtualBox:
 
 - pfSense → Firewall (WAN + LAN)
-- Kali Linux → Client machine (simulating an attacker)
+- Kali Linux → Client machine
 
-
-Kali Linux (192.168.1.10) → pfSense (192.168.1.1) → Internet
-
-
----
-
-**Configuration Steps**
-
-# 1. Network Setup#
-- pfSense configured with:
-  - WAN → NAT
-  - LAN → Internal Network (LAN)
-- Kali Linux connected to the same internal network
+Network flow:
+Kali Linux (192.168.1.10) → pfSense (192.168.1.1)
 
 ---
 
-### 2. Connectivity Test
+## 2- Connectivity Test
 
-The `ping` command was used to verify communication between Kali and pfSense:
+The ping command was used to verify communication:
 
-```bash
 ping 192.168.1.1
 
-Result: Successful communication between both machines.
+Result: Successful communication between Kali and pfSense.
 
-# 3. Network Scan#
+---
+
+## 3- Network Scan
 
 A scan was performed using Nmap:
 
 nmap 192.168.1.1
 
 Open ports detected:
+- 80/tcp (HTTP)
+- 53/tcp (DNS)
 
-80/tcp (HTTP)
-53/tcp (DNS)
-**4. Mise en place d’une règle firewall**
+---
 
-A firewall rule was created to block HTTP access:
+## 4- Firewall Rule
 
-Action → Block
-Protocol → TCP
-Destination → This Firewall
-Port → 80
-**5. Security Observation**
+A rule was created to block HTTP access:
 
-Despite the rule, port 80 remained accessible.
+- Action: Block
+- Protocol: TCP
+- Destination: This Firewall
+- Port: 80
 
-_Reason:_
-pfSense includes a default anti-lockout rule that prevents administrators from being locked out of the web interface.
+---
 
-Key Learnings
-Understanding how a firewall controls network traffic
-Using ping for connectivity testing
-Using nmap for network scanning
-Troubleshooting DHCP issues
-Understanding firewall rule priority
-Learning about pfSense anti-lockout protection
-Troubleshooting
+## 5- Observation
 
-During the project, a DHCP issue occurred:
+The port 80 remained open.
 
-Kali Linux received an APIPA address (169.254.x.x)
-This indicated that no DHCP server was responding
+Reason:
+pfSense has a default anti-lockout rule that ensures access to the web interface from the LAN.
 
-_Solution:_
-A static IP was manually assigned:
+---
+
+## 6- Troubleshooting
+
+A DHCP issue occurred:
+
+- Kali received an APIPA address (169.254.x.x)
+- No IP was assigned by the DHCP server
+
+Solution:
+A static IP was assigned manually:
 
 sudo ip addr add 192.168.1.10/24 dev eth0
-Screenshots
 
-Screenshots of the project are available in the screenshots/ folder:
+---
 
-Ping test
-Nmap scan results
-Firewall rule configuration
-Conclusion
+## 7- Key Learnings
 
-This project demonstrates a complete basic cybersecurity workflow:
+- Basic firewall configuration
+- Network troubleshooting
+- Use of ping for connectivity testing
+- Use of nmap for network scanning
+- Understanding firewall rule behavior
 
-Network configuration
-Connectivity testing
-Network scanning
-Firewall rule implementation
-Security analysis
+---
 
-It provides a solid introduction to firewall management and network security concepts.
+## 8- Conclusion
+
+This project demonstrates a basic cybersecurity workflow:
+
+- Network setup
+- Connectivity testing
+- Network scanning
+- Firewall configuration
+- Security analysis
