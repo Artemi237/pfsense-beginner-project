@@ -28,3 +28,4 @@ The HTTP port remained open due to the default anti-lockout rule in pfSense.
 **Conclusion**
 
 This project demonstrates how firewall rules, network configuration, and security analysis work together.
+it highlights real-world troubleshooting, including DHCP issues and firewall rule behavior.
