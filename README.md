@@ -89,10 +89,10 @@ sudo ip addr add 192.168.1.10/24 dev eth0
 ![Kali Network](screenshots/kali_network.png)
 
 ### Test de connectivité (Ping)
-![Ping OK](screenshots/ping ok.png)
+![Ping OK](screenshots/ping_ok.png)
 
 ### Règles de pare-feu
-![Firewall Rules](screenshots/regle de pare-feu - firewall rules.png)
+![Firewall Rules](screenshots/regle de pare-feu_firewall rules.png)
 
 ### Blocage HTTP (Firewall)
 ![Block HTTP](screenshots/block.png)
