@@ -92,7 +92,7 @@ sudo ip addr add 192.168.1.10/24 dev eth0
 ![Ping OK](screenshots/ping_ok.png)
 
 ### Règles de pare-feu
-![Firewall Rules](screenshots/regle de pare-feu_firewall rules.png)
+![Firewall Rules](screenshots/regle de pare-feu_firewall_rules.png)
 
 ### Blocage HTTP (Firewall)
 ![Block HTTP](screenshots/block.png)
