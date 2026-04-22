@@ -83,7 +83,7 @@ sudo ip addr add 192.168.1.10/24 dev eth0
 - ## Screenshots
 
 ### Accès interface pfSense
-![pfSense Interface](screenshots/accès interface pfsense.png)
+![pfSense Interface](screenshots/accès_interface_pfsense.png)
 
 ### Configuration réseau Kali
 ![Kali Network](screenshots/kali_network.png)
