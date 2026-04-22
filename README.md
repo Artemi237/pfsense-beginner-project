@@ -98,7 +98,7 @@ sudo ip addr add 192.168.1.10/24 dev eth0
 ![Block HTTP](screenshots/block.png)
 
 ### Scan Nmap
-![Nmap Scan](screenshots/nmap.png)
+![Nmap Scan](screenshots/nmap_after.png)
 
 ### Interface pfSense
 ![pfSense](screenshots/pfsense.png)
