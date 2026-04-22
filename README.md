@@ -80,6 +80,28 @@ sudo ip addr add 192.168.1.10/24 dev eth0
 - Use of ping for connectivity testing
 - Use of nmap for network scanning
 - Understanding firewall rule behavior
+- ## Screenshots
+
+### Accès interface pfSense
+![pfSense Interface](screenshots/accès interface pfsense.png)
+
+### Configuration réseau Kali
+![Kali Network](screenshots/kali_network.png)
+
+### Test de connectivité (Ping)
+![Ping OK](screenshots/ping ok.png)
+
+### Règles de pare-feu
+![Firewall Rules](screenshots/regle de pare-feu - firewall rules.png)
+
+### Blocage HTTP (Firewall)
+![Block HTTP](screenshots/block.png)
+
+### Scan Nmap
+![Nmap Scan](screenshots/nmap (2nd test).png)
+
+### Interface pfSense
+![pfSense](screenshots/pfsense.png)
 
 ---
 
